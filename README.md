@@ -1,7 +1,7 @@
 # Java2018GameProject
 Game: Text Based RPG (Dungeon Running Theme)
 
-Download [Entire] folder to edit and then [Reupload] when done!
+#Download [Entire] folder to edit and then [Reupload] when done!
 
 
 Spend points on Stat Increases (Get points for completing dungeon)
