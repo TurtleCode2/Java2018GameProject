@@ -15,6 +15,7 @@ public class Singleplayer {
         //Other Variables
         int dungeonNumber = 1;
         int difficulty = 0;
+        int points = 0;
         String dungeonDifficulty ="";
         String playAgain = "";
         int enemySelect = 0;
@@ -70,13 +71,13 @@ public class Singleplayer {
                     right = ("[Balanced Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 if (enemySelect==1) {//Monster 2
-                    rightHealth = 25;
-                    rightDamage = 10;
+                    rightHealth = 50;
+                    rightDamage = 5;
                     right = ("[Heavy Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 if (enemySelect==2) {//Monster 3
-                    rightHealth = 25;
-                    rightDamage = 10;
+                    rightHealth = 10;
+                    rightDamage = 20;
                     right = ("[Light Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
             }
@@ -109,13 +110,13 @@ public class Singleplayer {
                     right = ("[Balanced Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 if (enemySelect==1) {//Monster 2
-                    rightHealth = 25;
-                    rightDamage = 10;
+                    rightHealth = 50;
+                    rightDamage = 5;
                     right = ("[Heavy Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 if (enemySelect==2) {//Monster 3
-                    rightHealth = 25;
-                    rightDamage = 10;
+                    rightHealth = 10;
+                    rightDamage = 20;
                     right = ("[Light Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 //Center Enemy
@@ -126,13 +127,13 @@ public class Singleplayer {
                     center = ("[Balanced Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
                 }
                 if (enemySelect==1) {//Monster 2
-                    centerHealth = 25;
-                    centerDamage = 10;
+                    centerHealth = 50;
+                    centerDamage = 5;
                     center = ("[Heavy Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
                 }
                 if (enemySelect==2) {//Monster 3
-                    centerHealth = 25;
-                    centerDamage = 10;
+                    centerHealth = 10;
+                    centerDamage = 20;
                     center = ("[Light Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
                 }
             }
@@ -163,13 +164,13 @@ public class Singleplayer {
                     right = ("[Balanced Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 if (enemySelect==1) {//Monster 2
-                    rightHealth = 25;
-                    rightDamage = 10;
+                    rightHealth = 50;
+                    rightDamage = 5;
                     right = ("[Heavy Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 if (enemySelect==2) {//Monster 3
-                    rightHealth = 25;
-                    rightDamage = 10;
+                    rightHealth = 10;
+                    rightDamage = 20;
                     right = ("[Light Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
                 }
                 //Center Enemy
@@ -180,13 +181,13 @@ public class Singleplayer {
                     center = ("[Balanced Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
                 }
                 if (enemySelect==1) {//Monster 2
-                    centerHealth = 25;
-                    centerDamage = 10;
+                    centerHealth = 50;
+                    centerDamage = 5;
                     center = ("[Heavy Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
                 }
                 if (enemySelect==2) {//Monster 3
-                    centerHealth = 25;
-                    centerDamage = 10;
+                    centerHealth = 10;
+                    centerDamage = 20;
                     center = ("[Light Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
                 }
                 //Far Left Enemy
@@ -197,13 +198,13 @@ public class Singleplayer {
                     farLeft = ("[Balanced Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
                 }
                 if (enemySelect==1) {//Monster 2
-                    farLeftHealth = 25;
-                    farLeftDamage = 10;
+                    farLeftHealth = 50;
+                    farLeftDamage = 5;
                     farLeft = ("[Heavy Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
                 }
                 if (enemySelect==2) {//Monster 3
-                    farLeftHealth = 25;
-                    farLeftDamage = 10;
+                    farLeftHealth = 10;
+                    farLeftDamage = 5;
                     farLeft = ("[Light Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
                 }
                 //Far Right Enemy
@@ -214,23 +215,143 @@ public class Singleplayer {
                     farRight = ("[Balanced Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
                 }
                 if (enemySelect==1) {//Monster 2
-                    farRightHealth = 25;
-                    farRightDamage = 10;
+                    farRightHealth = 50;
+                    farRightDamage = 5;
                     farRight = ("[Heavy Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
                 }
                 if (enemySelect==2) {//Monster 3
-                    farRightHealth = 25;
-                    farRightDamage = 10;
+                    farRightHealth = 10;
+                    farRightDamage = 20;
                     farRight = ("[Light Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
                 }
             }
             //Dungeon
             System.out.println("Dungeon Level: "+dungeonDifficulty);
-            System.out.println(farLeft+" "+left+" "+center+" "+right+" "+farRight);
             //Combat System
-            System.out.println("\nYour Stats: \nHP: "+health+"\nDMG: "+(int)(damageBase*damageMultiplier));
-            
+            while (true) {
+                while (true) {
+                    System.out.println("\n\n"+farLeft+" "+left+" "+center+" "+right+" "+farRight);
+                    System.out.println("\nYour Stats: \nHP: "+health+"\nDMG: "+(int)(damageBase*damageMultiplier));
+                    System.out.print("\n\n-=Your Turn=-\n(A) Attack\n(S) Special\n(I) Item\n");
+                    String turn = reader.nextLine();
+                    if (turn.equals("A")) { //Attack Option
+                        while (true) { //Selecting which monster to attack
+                            System.out.print("Which monster will you attack?\n [FL] [L] [C] [R] [FR] ");
+                            String option = reader.nextLine();
+                            if (option.equals("FL")) {
+                                if (farLeft.equals("")) {
+                                    System.out.println("There is nothing there!");
+                                }
+                                else {
+                                    int crit = RNG.nextInt(1)+1;
+                                    farLeftHealth = farLeftHealth - (int)(damageBase*damageMultiplier*crit);
+                                    if (farLeftHealth<=0) {
+                                        farLeft ="";
+                                        points++;
+                                    }
+                                    break;
+                                }
+                            }
+                            else if (option.equals("L")) {
+                                if (left.equals("")) {
+                                    System.out.println("There is nothing there!");
+                                }
+                                else {
+                                    int crit = RNG.nextInt(1)+1;
+                                    leftHealth = leftHealth - (int)(damageBase*damageMultiplier*crit);
+                                    if (leftHealth<=0) {
+                                        left ="";
+                                        points++;
+                                    }
+                                    break;
+                                }
+                            }
+                            else if (option.equals("C")) {
+                                if (center.equals("")) {
+                                    System.out.println("There is nothing there!");
+                                }
+                                else {
+                                    int crit = RNG.nextInt(1)+1;
+                                    centerHealth = centerHealth - (int)(damageBase*damageMultiplier*crit);
+                                    if (centerHealth<=0) {
+                                        farLeft ="";
+                                        points++;
+                                    }
+                                    break;
+                                }
+                            }
+                            else if (option.equals("R")) {
+                                if (right.equals("")) {
+                                    System.out.println("There is nothing there!");
+                                }
+                                else {
+                                    int crit = RNG.nextInt(1)+1;
+                                    rightHealth = rightHealth - (int)(damageBase*damageMultiplier*crit);
+                                    if (rightHealth<=0) {
+                                        right ="";
+                                        points++;
+                                    }
+                                    break;
+                                }
+                            }
+                            else if (option.equals("FR")) {
+                                if (farRight.equals("")) {
+                                    System.out.println("There is nothing there!");
+                                }
+                                else {
+                                    int crit = RNG.nextInt(1)+1;
+                                    farRightHealth = farRightHealth - (int)(damageBase*damageMultiplier*crit);
+                                    if (farRightHealth<=0) {
+                                        farRight ="";
+                                        points++;
+                                    }
+                                    break;
+                                }
+                            }
+                            else {
+                                System.out.println("That is an invalid response");
+                            }
+                        }
+                        break;
+                    }
+                    else if (turn.equals("S")) { //Special Option
+                        break;
+                    }
+                    else if (turn.equals("I")) { //Item Option
+                        break;
+                    }
+                    else { //Invalid input output
+                        System.out.println("That is an invalid response");
+                    }
+                }
+                //Monster turn
+                if (farLeft.equals("")&&left.equals("")&&center.equals("")&&right.equals("")&&farRight.equals("")) {
+                    System.out.println("All Monsters are dead! Dungeon "+dungeonNumber+" Cleared!");
+                    break;
+                }
+                else {
+                    System.out.println("-=Monster's Turn=-");
+                    int totalDamage = farLeftDamage+leftDamage+centerDamage+rightDamage+farRightDamage;
+                    health = health - totalDamage;
+                    System.out.println("They did "+totalDamage+" Damage!\nYou now have "+health+" HP!");
+                }
+            }
             dungeonNumber++;
+            //Shop Option
+            while(true) {
+                System.out.print("Do you want to go to the shop? (Y/N): ");
+                String option = reader.nextLine();
+                if (option.equals("Y")) {
+                    System.out.println("\n-=Welcome to The Shop=-");
+                }
+                else if (option.equals("N")) {
+                    System.out.println("You decided not to visit the shop");
+                    break;
+                }
+                else {
+                    System.out.println("That is an invalid input");
+                }
+            }
             while (true) {
                 System.out.print("Advance to next Dungeon? (Y/N): ");
                 playAgain = reader.nextLine();
