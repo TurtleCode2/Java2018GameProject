@@ -3,39 +3,40 @@ Game: Text Based RPG (Dungeon Running Theme)
 
 #Download [Entire] folder to edit and then [Reupload] when done!
 
+To Do:
+Singleplayer:
+- Implement "Boss" Dungeons
+- Implement "Special Abilities"
 
-Spend points on Stat Increases (Get points for completing dungeon)
-
-Option For Single Player or Multiplayer
+SINGLEPLAYER DATA
 
 Shop:
  - Heal full
  - Health Upgrade
- - Damage Upgrade
- - Weapon Upgrade
+ - Base Damage Upgrade
+ - Multiplier Damage Upgrade
+ - Health Potion 1
+ - Health Potion 2
+ - Health Potion 3
+ - Specials  ***Coming Soon***
 
 Stats:
- - Level: (Dungeon Number)
  - Health: 100 base (increase by 25 each upgrade)
- - Damage: 10 base (increase with weapons or upgrade (increment by 5))
- - Weapon: Damage Multiplier, Miss Chance(base 10%), Critical Chance(base 10%), Additional Effect
- - Specials:
-
-
-Damage Calculations:
-- [Random Number in Base Damage Range] * [Weapon Damage Multiplier]
-- [Random number for miss chance]
-- [Random number for crit chance]
+ - Damage Calculation: [Base Damage] * [Damage Multiplier] * [Crit]
+ - Base Damage: 10 base (increase by 5 each upgrade)
+ - Damage Multiplier: 1.0 base (increase by 0.1 each upgrade)
+ - Critical Hit is 2x damage and a 50% chance
+ - Special: ***Coming Soon***
 
 Dungeon Mechanics:
 - Number of Enemies (Player chooses which enemy to attack)
-                    (Enemies have place values ex. FarLeft/Left/Center/Right/FarRight)
+                    (Enemies have place values [FarLeft][Left][Center][Right][FarRight])
   - Easy: 2 enemies
   - Normal: 3 enemies
   - Difficult: 5 enemies
-  - Boss: Boss enemy
+  - Boss: Boss enemy (every 5 dungeons)  ***Coming Soon***
 
-Enemy Stats: (Enemy could be displayed as: [<EnemyName> HP:<X> DMG:<Y> POS:<Z>]
+Enemy Stats: (Enemy displayed as: [EnemyName HP: DMG:]
 
 Monster1:
 - Health: 25
@@ -51,3 +52,6 @@ Monster3:
 - Health: 10
 - Damage 20
 - 1 point when defeated
+
+Monster Boss 1:
+-  ***Coming Soon***
