@@ -7,6 +7,10 @@ To Do:
 Singleplayer:
 - Implement "Boss" Dungeons
 - Implement "Special Abilities"
+- Other "Bells and Whistles"
+
+Multiplayer
+- Stuffs
 
 SINGLEPLAYER DATA
 
@@ -55,3 +59,7 @@ Monster3:
 
 Monster Boss 1:
 -  ***Coming Soon***
+  
+MULTIPLAYER DATA
+- some stuffs
+
