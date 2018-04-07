@@ -13,17 +13,19 @@ public class Singleplayer {
         double damageMultiplier = 1.0;
         String special = "";
         //Items
-        int healthPotion1 = 3; //Restores 25
-        int healthPotion2 = 2; //Restores 50
-        int healthPotion3 = 1; //Restores 100
-        
+        int healthPotion1 = 3; //Restores 25 HP
+        int healthPotion2 = 2; //Restores 50 HP
+        int healthPotion3 = 1; //Restores 100 HP
         //Other Variables
-        int dungeonNumber = 1;
-        int difficulty = 0;
-        int points = 0;
-        String dungeonDifficulty ="";
-        String playAgain = "";
-        int enemySelect = 0;
+        int dungeonNumber = 1; //Counts Dungeon Number
+        int difficulty = 0; //Determines how many monsters are in a dungeon
+        int points = 0; //Currency storing variable
+        String dungeonDifficulty =""; //Saves Dungeon Difficulty to output to player
+        String playAgain = ""; //Stroes Play Again Answer
+        int enemySelect = 0; //Stores a value for use outside loops/if/else statements
+        String select =""; //Stores a value for use outside loops/if/else statements
+        String option =""; //Stores a value for use outside loops/if/else statements
+        String buy =""; //Stores a value for use outside loops/if/else statements
         //Enemy Stats
         int farLeftHealth = 0;
         int farLeftDamage = 0;
@@ -235,14 +237,14 @@ public class Singleplayer {
             //Combat System
             while (true) {
                 while (true) {
-                    System.out.println("\n\n"+farLeft+" "+left+" "+center+" "+right+" "+farRight);
+                    System.out.println("\n"+farLeft+" "+left+" "+center+" "+right+" "+farRight);
                     System.out.println("\nYour Stats: \nHP: "+health+"\nDMG: "+(int)(damageBase*damageMultiplier));
-                    System.out.print("\n\n-=Your Turn=-\n(A) Attack\n(S) Special\n(I) Item\n");
+                    System.out.print("\n-=Your Turn=-\n(A) Attack\n(S) Special\n(I) Item\n");
                     String turn = reader.nextLine();
                     if (turn.equals("A")) { //Attack Option
                         while (true) { //Selecting which monster to attack
-                            System.out.print("Which monster will you attack?\n [FL] [L] [C] [R] [FR] ");
-                            String option = reader.nextLine();
+                            System.out.print("Which monster will you attack?\n [FL] [L] [C] [R] [FR] \n (B) To Cancel");
+                            option = reader.nextLine();
                             if (option.equals("FL")) {
                                 if (farLeft.equals("")) {
                                     System.out.println("There is nothing there!");
@@ -333,11 +335,16 @@ public class Singleplayer {
                                     break;
                                 }
                             }
+                            else if (option.equals("B")) {
+                                break;
+                            }
                             else {
                                 System.out.println("That is an invalid response");
                             }
                         }
-                        break;
+                        if (option.equals("FL")||option.equals("L")||option.equals("C")||option.equals("R")||option.equals("FR")) {
+                            break;
+                        }
                     }
                     else if (turn.equals("S")) { //Special Option
                         if (special.equals("")) {
@@ -368,9 +375,9 @@ public class Singleplayer {
                     }
                     else if (turn.equals("I")) { //Item Option
                         while (true) {
-                            System.out.println("\n-=Items=-\n(HP1) Health Potion Level 1 x"+healthPotion1+"\n(HP2) Health Potion Level 2 x"+healthPotion2+"\n(HP3) Health Potion Level 3 x"+healthPotion3);
+                            System.out.println("\n-=Items=-\n(HP1) Health Potion Level 1 x"+healthPotion1+"\n(HP2) Health Potion Level 2 x"+healthPotion2+"\n(HP3) Health Potion Level 3 x"+healthPotion3+"\n(B) Back");
                             System.out.print("Select: ");
-                            String select = reader.nextLine();
+                            select = reader.nextLine();
                             if (select.equals("HP1")) {
                                 if (healthPotion1==0) {
                                     System.out.println("You don't have any!");
@@ -404,11 +411,16 @@ public class Singleplayer {
                                     break;
                                 }
                             }
+                            else if (select.equals("B")) {
+                                break;
+                            }
                             else {
                                 System.out.println("That is an invalid response");
                             }
                         }
-                        break;
+                        if (select.equals("HP1")||select.equals("HP2")||select.equals("HP3")) {
+                            break;
+                        }
                     }
                     else { //Invalid input output
                         System.out.println("That is an invalid response");
@@ -424,18 +436,107 @@ public class Singleplayer {
                     int totalDamage = farLeftDamage+leftDamage+centerDamage+rightDamage+farRightDamage;
                     health = health - totalDamage;
                     System.out.println("They did "+totalDamage+" Damage!\nYou now have "+health+" HP!");
+                    if (health<=0) {
+                        System.out.println("\nYou are out of HP!\n-=GAME OVER!=-");
+                        break;
+                    }
                 }
             }
+            if (health<=0) {
+                break;
+             }
             dungeonNumber++;
             //Shop Option
             while(true) {
                 System.out.print("Do you want to go to the shop? (Y/N): ");
-                String option = reader.nextLine();
+                option = reader.nextLine();
                 if (option.equals("Y")) {
                     System.out.println("\n-=Welcome to The Shop=-");
+                    while (true) {
+                        System.out.print("\n(FH) Full Heal: 1 Coin\n(MXH) Max Health Increase: 3 Coins\n(MXD) Base Damage Increase: 3 Coins\n(DXI) Damage Multiplier Increase: 3 Coins\n(HP1) Health Potion Level 1: 2 Coins\n(HP2) Health Potion Level 2: 4 Coins\n(HP3) Health Potion Level 3: 6 Coins\n(E) Exit Shop\nYou have "+points+" coins: ");
+                        buy = reader.nextLine();
+                        if (buy.equals("HP1")) {
+                            if (points>=2) {
+                                System.out.println("You bought a Health Potion Lavel 1");
+                                healthPotion1++;
+                                points = points -2;
+                            }
+                            else {
+                                System.out.println("You don't have enought money");
+                            }
+                        }
+                        else if (buy.equals("HP2")) {
+                            if (points>=4) {
+                                System.out.println("You bought a Health Potion Lavel 2");
+                                healthPotion2++;
+                                points = points -4;
+                            }
+                            else {
+                                System.out.println("You don't have enought money");
+                            }
+                        }
+                        else if (buy.equals("HP3")) {
+                            if (points>=6) {
+                                System.out.println("You bought a Health Potion Lavel 3");
+                                healthPotion3++;
+                                points = points -6;
+                            }
+                            else {
+                                System.out.println("You don't have enought money");
+                            }
+                        }
+                        else if (buy.equals("FH")) {
+                            if (points>=1) {
+                                System.out.println("You bought a Full Heal");
+                                health = healthMax;
+                                points = points -1;
+                            }
+                            else {
+                                System.out.println("You don't have enought money");
+                            }
+                        }
+                        else if (buy.equals("MXH")) {
+                            if (points>=3) {
+                                System.out.println("Your Maximum Health has been increased by 25");
+                                healthMax = healthMax + 25;
+                                points = points -3;
+                            }
+                            else {
+                                System.out.println("You don't have enought money");
+                            }
+                        }
+                        else if (buy.equals("MXD")) {
+                            if (points>=3) {
+                                System.out.println("Your base damage increased by 5");
+                                damageBase = damageBase +5;
+                                points = points -3;
+                            }
+                            else {
+                                System.out.println("You don't have enought money");
+                            }
+                        }
+                        else if (buy.equals("DXI")) {
+                            if (points>=3) {
+                                System.out.println("Your damage multiplier increased by 0.1");
+                                damageMultiplier = damageMultiplier + 0.1;
+                                points = points -3;
+                            }
+                            else {
+                                System.out.println("You don't have enought money");
+                            }
+                        }
+                        else if (buy.equals("E")) {
+                            System.out.println("You decided to exit the shop");
+                            break;
+                        }
+                        else {
+                            System.out.println("That is an invalid response");
+                        }
+                    }
+                    break;
                 }
                 else if (option.equals("N")) {
-                    System.out.println("You decided not to visit the shop");
+                    System.out.println("\nYou decided not to visit the shop");
                     break;
                 }
                 else {
@@ -443,7 +544,7 @@ public class Singleplayer {
                 }
             }
             while (true) {
-                System.out.print("Advance to next Dungeon? (Y/N): ");
+                System.out.print("\nAdvance to next Dungeon? (Y/N): ");
                 playAgain = reader.nextLine();
                 if (playAgain.equals("Y")||playAgain.equals("N")) {
                     break;
@@ -453,6 +554,7 @@ public class Singleplayer {
                 }
             }
             if (playAgain.equals("N")){
+                System.out.println("\n-=GAME OVER!=-\nDungeon Reached: Dungeon "+(dungeonNumber-1));
                 break;
             }
             if (playAgain.equals("Y")) {
