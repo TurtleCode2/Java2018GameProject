@@ -47,7 +47,12 @@ public class Singleplayer {
         System.out.println("\n\n\nSingle Player Selected...");
         while (true) {
             System.out.println("-=Entering Dungeon "+dungeonNumber+"=-");
-            difficulty = RNG.nextInt(3);
+            if (dungeonNumber%5==0) {
+                difficulty = 5;
+            }
+            else {
+                difficulty = RNG.nextInt(3);
+            }
             if (difficulty==0) {//Easy Dungeon
                 dungeonDifficulty = "Easy (2) Enemies";
                 farLeft = "";
@@ -232,6 +237,25 @@ public class Singleplayer {
                     farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
                 }
             }
+            //Boss Dungeon
+            if (difficulty==5) {
+                dungeonDifficulty = "***BOSS***";
+                centerHealth = dungeonNumber*10;
+                centerDamage = 0;
+                center = ("[Boss HP: "+centerHealth+" DMG: "+centerDamage+"]");
+                farLeftHealth = dungeonNumber*5;
+                farLeftDamage = dungeonNumber*2;
+                farLeft = ("[Left Leg HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
+                farRightHealth = dungeonNumber*5;
+                farRightDamage = dungeonNumber*2;
+                farRight = ("[Right Leg HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
+                leftHealth = dungeonNumber*2;
+                leftDamage = dungeonNumber*5;
+                left = ("[Left Arm HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                rightHealth = dungeonNumber*2;
+                rightDamage = dungeonNumber*5;
+                right = ("[Right Arm HP: "+rightHealth+" DMG: "+rightDamage+"]");
+            }
             //Dungeon
             System.out.println("Dungeon Level: "+dungeonDifficulty);
             //Combat System
@@ -250,7 +274,7 @@ public class Singleplayer {
                                     System.out.println("There is nothing there!");
                                 }
                                 else {
-                                    int crit = RNG.nextInt(1)+1;
+                                    int crit = RNG.nextInt(2)+1;
                                     farLeftHealth = farLeftHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
@@ -268,7 +292,7 @@ public class Singleplayer {
                                     System.out.println("There is nothing there!");
                                 }
                                 else {
-                                    int crit = RNG.nextInt(1)+1;
+                                    int crit = RNG.nextInt(2)+1;
                                     leftHealth = leftHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
@@ -286,7 +310,7 @@ public class Singleplayer {
                                     System.out.println("There is nothing there!");
                                 }
                                 else {
-                                    int crit = RNG.nextInt(1)+1;
+                                    int crit = RNG.nextInt(2)+1;
                                     centerHealth = centerHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
@@ -304,7 +328,7 @@ public class Singleplayer {
                                     System.out.println("There is nothing there!");
                                 }
                                 else {
-                                    int crit = RNG.nextInt(1)+1;
+                                    int crit = RNG.nextInt(2)+1;
                                     rightHealth = rightHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
@@ -322,7 +346,7 @@ public class Singleplayer {
                                     System.out.println("There is nothing there!");
                                 }
                                 else {
-                                    int crit = RNG.nextInt(1)+1;
+                                    int crit = RNG.nextInt(2)+1;
                                     farRightHealth = farRightHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
@@ -410,7 +434,7 @@ public class Singleplayer {
                     health = health - totalDamage;
                     System.out.println("They did "+totalDamage+" Damage!\nYou now have "+health+" HP!");
                     if (health<=0) {
-                        System.out.println("\nYou are out of HP!\n-=GAME OVER!=-");
+                        System.out.println("\nYou are out of HP!\n-=GAME OVER!=-\nDungeon Reached: Dungeon "+(dungeonNumber));
                         break;
                     }
                 }
