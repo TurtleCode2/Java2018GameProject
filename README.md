@@ -3,15 +3,6 @@ Game: Text Based RPG (Dungeon Running Theme)
 
 #Download [Entire] folder to edit and then [Reupload] when done!
 
-To Do:
-Singleplayer:
-- Implement "Boss" Dungeons
-- Implement "Special Abilities"
-- Other "Bells and Whistles"
-
-Multiplayer
-- Stuffs
-
 SINGLEPLAYER DATA
 
 Shop:
@@ -22,8 +13,7 @@ Shop:
  - Health Potion 1
  - Health Potion 2
  - Health Potion 3
- - Specials  ***Coming Soon***
-
+ 
 Stats:
  - Health: 100 base (increase by 25 each upgrade)
  - Damage Calculation: [Base Damage] * [Damage Multiplier] * [Crit]
@@ -38,7 +28,7 @@ Dungeon Mechanics:
   - Easy: 2 enemies
   - Normal: 3 enemies
   - Difficult: 5 enemies
-  - Boss: Boss enemy (every 5 dungeons)  ***Coming Soon***
+  - Boss: Boss enemy (every 5 dungeons)
 
 Enemy Stats: (Enemy displayed as: [EnemyName HP: DMG:]
 
@@ -58,7 +48,8 @@ Monster3:
 - 1 point when defeated
 
 Monster Boss 1:
--  ***Coming Soon***
+-  5 Parts, 2xlegs 2xarms 1xbody
+- Stats increase with dungeon number
   
 MULTIPLAYER DATA
 - some stuffs
