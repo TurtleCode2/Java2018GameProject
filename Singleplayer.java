@@ -11,7 +11,6 @@ public class Singleplayer {
         int health = 100;
         int damageBase = 10;
         double damageMultiplier = 1.0;
-        String special = "";
         //Items
         int healthPotion1 = 3; //Restores 25 HP
         int healthPotion2 = 2; //Restores 50 HP
@@ -26,6 +25,7 @@ public class Singleplayer {
         String select =""; //Stores a value for use outside loops/if/else statements
         String option =""; //Stores a value for use outside loops/if/else statements
         String buy =""; //Stores a value for use outside loops/if/else statements
+        String spec =""; //Stores a value for use ouside loops/if/else statements
         //Enemy Stats
         int farLeftHealth = 0;
         int farLeftDamage = 0;
@@ -239,7 +239,7 @@ public class Singleplayer {
                 while (true) {
                     System.out.println("\n"+farLeft+" "+left+" "+center+" "+right+" "+farRight);
                     System.out.println("\nYour Stats: \nHP: "+health+"\nDMG: "+(int)(damageBase*damageMultiplier));
-                    System.out.print("\n-=Your Turn=-\n(A) Attack\n(S) Special\n(I) Item\n");
+                    System.out.print("\n-=Your Turn=-\n(A) Attack\n(I) Item\n");
                     String turn = reader.nextLine();
                     if (turn.equals("A")) { //Attack Option
                         while (true) { //Selecting which monster to attack
@@ -343,33 +343,6 @@ public class Singleplayer {
                             }
                         }
                         if (option.equals("FL")||option.equals("L")||option.equals("C")||option.equals("R")||option.equals("FR")) {
-                            break;
-                        }
-                    }
-                    else if (turn.equals("S")) { //Special Option
-                        if (special.equals("")) {
-                            System.out.println("\nYou don't have any specials right now!");
-                        }
-                        else if (special.equals("healing")) {
-                            health = health + 50;
-                            break;
-                        }
-                        else if (special.equals("damage")) {
-                            if (farLeftHealth>0) {
-                                farLeftHealth = farLeftHealth - 10;
-                            }
-                            if (leftHealth>0) {
-                                leftHealth = leftHealth - 10;
-                            }
-                            if (centerHealth>0) {
-                                centerHealth = centerHealth - 10;
-                            }
-                            if (rightHealth>0) {
-                                rightHealth = rightHealth - 10;
-                            }
-                            if (farRightHealth>0) {
-                                farRightHealth = farRightHealth - 10;
-                            }
                             break;
                         }
                     }
