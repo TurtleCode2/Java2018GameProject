@@ -63,34 +63,34 @@ public class Singleplayer {
                 if (enemySelect==0) {//Monster 1
                     leftHealth = 25;
                     leftDamage = 10;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 if (enemySelect==1) {//Monster 2
                     leftHealth = 50;
                     leftDamage = 5;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 if (enemySelect==2) {//Monster 3
                     leftHealth = 10;
                     leftDamage = 20;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 //Right Enemy
                 enemySelect = RNG.nextInt(3);
                 if (enemySelect==0) {//Monster 1
                     rightHealth = 25;
                     rightDamage = 10;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 if (enemySelect==1) {//Monster 2
                     rightHealth = 50;
                     rightDamage = 5;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 if (enemySelect==2) {//Monster 3
                     rightHealth = 10;
                     rightDamage = 20;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
             }
             if (difficulty==1) {//Normal Dungeon
@@ -102,51 +102,51 @@ public class Singleplayer {
                 if (enemySelect==0) {//Monster 1
                     leftHealth = 25;
                     leftDamage = 10;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 if (enemySelect==1) {//Monster 2
                     leftHealth = 50;
                     leftDamage = 5;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 if (enemySelect==2) {//Monster 3
                     leftHealth = 10;
                     leftDamage = 20;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 //Right Enemy
                 enemySelect = RNG.nextInt(3);
                 if (enemySelect==0) {//Monster 1
                     rightHealth = 25;
                     rightDamage = 10;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 if (enemySelect==1) {//Monster 2
                     rightHealth = 50;
                     rightDamage = 5;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 if (enemySelect==2) {//Monster 3
                     rightHealth = 10;
                     rightDamage = 20;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 //Center Enemy
                 enemySelect = RNG.nextInt(3);
                 if (enemySelect==0) {//Monster 1
                     centerHealth = 25;
                     centerDamage = 10;
-                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
+                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+" POS: C]");
                 }
                 if (enemySelect==1) {//Monster 2
                     centerHealth = 50;
                     centerDamage = 5;
-                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
+                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+" POS: C]");
                 }
                 if (enemySelect==2) {//Monster 3
                     centerHealth = 10;
                     centerDamage = 20;
-                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
+                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+" POS: C]");
                 }
             }
             if (difficulty==2) {//Difficult Dungeon
@@ -156,85 +156,85 @@ public class Singleplayer {
                 if (enemySelect==0) {//Monster 1
                     leftHealth = 25;
                     leftDamage = 10;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 if (enemySelect==1) {//Monster 2
                     leftHealth = 50;
                     leftDamage = 5;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 if (enemySelect==2) {//Monster 3
                     leftHealth = 10;
                     leftDamage = 20;
-                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                    left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 }
                 //Right Enemy
                 enemySelect = RNG.nextInt(3);
                 if (enemySelect==0) {//Monster 1
                     rightHealth = 25;
                     rightDamage = 10;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 if (enemySelect==1) {//Monster 2
                     rightHealth = 50;
                     rightDamage = 5;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 if (enemySelect==2) {//Monster 3
                     rightHealth = 10;
                     rightDamage = 20;
-                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                    right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
                 }
                 //Center Enemy
                 enemySelect = RNG.nextInt(3);
                 if (enemySelect==0) {//Monster 1
                     centerHealth = 25;
                     centerDamage = 10;
-                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
+                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+" POS: C]");
                 }
                 if (enemySelect==1) {//Monster 2
                     centerHealth = 50;
                     centerDamage = 5;
-                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
+                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+" POS: C]");
                 }
                 if (enemySelect==2) {//Monster 3
                     centerHealth = 10;
                     centerDamage = 20;
-                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
+                    center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+" POS: C]");
                 }
                 //Far Left Enemy
                 enemySelect = RNG.nextInt(3);
                 if (enemySelect==0) {//Monster 1
                     farLeftHealth = 25;
                     farLeftDamage = 10;
-                    farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
+                    farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+" POS: FL]");
                 }
                 if (enemySelect==1) {//Monster 2
                     farLeftHealth = 50;
                     farLeftDamage = 5;
-                    farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
+                    farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+" POS: FL]");
                 }
                 if (enemySelect==2) {//Monster 3
                     farLeftHealth = 10;
-                    farLeftDamage = 5;
-                    farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
+                    farLeftDamage = 20;
+                    farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+" POS: FL]");
                 }
                 //Far Right Enemy
                 enemySelect = RNG.nextInt(3);
                 if (enemySelect==0) {//Monster 1
                     farRightHealth = 25;
                     farRightDamage = 10;
-                    farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
+                    farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+" POS: FR]");
                 }
                 if (enemySelect==1) {//Monster 2
                     farRightHealth = 50;
                     farRightDamage = 5;
-                    farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
+                    farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+" POS: FR]");
                 }
                 if (enemySelect==2) {//Monster 3
                     farRightHealth = 10;
                     farRightDamage = 20;
-                    farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
+                    farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+" POS: FR]");
                 }
             }
             //Boss Dungeon
@@ -242,19 +242,19 @@ public class Singleplayer {
                 dungeonDifficulty = "***BOSS***";
                 centerHealth = dungeonNumber*10;
                 centerDamage = 0;
-                center = ("[Boss HP: "+centerHealth+" DMG: "+centerDamage+"]");
-                farLeftHealth = dungeonNumber*5;
+                center = ("[Boss HP: "+centerHealth+" DMG: "+centerDamage+" POS: C]");
+                farLeftHealth = dungeonNumber*4;
                 farLeftDamage = dungeonNumber*2;
-                farLeft = ("[Left Leg HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
-                farRightHealth = dungeonNumber*5;
+                farLeft = ("[Left Leg HP: "+farLeftHealth+" DMG: "+farLeftDamage+" POS: FL]");
+                farRightHealth = dungeonNumber*4;
                 farRightDamage = dungeonNumber*2;
-                farRight = ("[Right Leg HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
+                farRight = ("[Right Leg HP: "+farRightHealth+" DMG: "+farRightDamage+" POS: FR]");
                 leftHealth = dungeonNumber*2;
-                leftDamage = dungeonNumber*5;
-                left = ("[Left Arm HP: "+leftHealth+" DMG: "+leftDamage+"]");
+                leftDamage = dungeonNumber*4;
+                left = ("[Left Arm HP: "+leftHealth+" DMG: "+leftDamage+" POS: L]");
                 rightHealth = dungeonNumber*2;
-                rightDamage = dungeonNumber*5;
-                right = ("[Right Arm HP: "+rightHealth+" DMG: "+rightDamage+"]");
+                rightDamage = dungeonNumber*4;
+                right = ("[Right Arm HP: "+rightHealth+" DMG: "+rightDamage+" POS: R]");
             }
             //Dungeon
             System.out.println("Dungeon Level: "+dungeonDifficulty);
@@ -275,6 +275,9 @@ public class Singleplayer {
                                 }
                                 else {
                                     int crit = RNG.nextInt(2)+1;
+                                    if (crit==2) {
+                                        System.out.println("Critical Hit!");
+                                    }
                                     farLeftHealth = farLeftHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     farLeft = ("[Monster HP: "+farLeftHealth+" DMG: "+farLeftDamage+"]");
@@ -293,6 +296,9 @@ public class Singleplayer {
                                 }
                                 else {
                                     int crit = RNG.nextInt(2)+1;
+                                    if (crit==2) {
+                                        System.out.println("Critical Hit!");
+                                    }
                                     leftHealth = leftHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     left = ("[Monster HP: "+leftHealth+" DMG: "+leftDamage+"]");
@@ -311,6 +317,9 @@ public class Singleplayer {
                                 }
                                 else {
                                     int crit = RNG.nextInt(2)+1;
+                                    if (crit==2) {
+                                        System.out.println("Critical Hit!");
+                                    }
                                     centerHealth = centerHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     center = ("[Monster HP: "+centerHealth+" DMG: "+centerDamage+"]");
@@ -329,6 +338,9 @@ public class Singleplayer {
                                 }
                                 else {
                                     int crit = RNG.nextInt(2)+1;
+                                    if (crit==2) {
+                                        System.out.println("Critical Hit!");
+                                    }
                                     rightHealth = rightHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     right = ("[Monster HP: "+rightHealth+" DMG: "+rightDamage+"]");
@@ -347,6 +359,9 @@ public class Singleplayer {
                                 }
                                 else {
                                     int crit = RNG.nextInt(2)+1;
+                                    if (crit==2) {
+                                        System.out.println("Critical Hit!");
+                                    }
                                     farRightHealth = farRightHealth - (int)(damageBase*damageMultiplier*crit);
                                     System.out.println("You did "+(int)(damageBase*damageMultiplier*crit)+" damage");
                                     farRight = ("[Monster HP: "+farRightHealth+" DMG: "+farRightDamage+"]");
@@ -450,7 +465,7 @@ public class Singleplayer {
                 if (option.equals("Y")) {
                     System.out.println("\n-=Welcome to The Shop=-");
                     while (true) {
-                        System.out.print("\n(FH) Full Heal: 1 Coin\n(MXH) Max Health Increase: 3 Coins\n(MXD) Base Damage Increase: 3 Coins\n(DXI) Damage Multiplier Increase: 3 Coins\n(HP1) Health Potion Level 1: 2 Coins\n(HP2) Health Potion Level 2: 4 Coins\n(HP3) Health Potion Level 3: 6 Coins\n(E) Exit Shop\nYou have "+points+" coins: ");
+                        System.out.print("\n(FH) Full Heal: 1 Coin\n(MXH) Max Health Increase: 3 Coins\n(MXD) Base Damage Increase: 3 Coins\n(DXI) Damage Multiplier Increase: 3 Coins\n(HP1) Health Potion Level 1: 2 Coins\n(HP2) Health Potion Level 2: 4 Coins\n(HP3) Health Potion Level 3: 5 Coins\n(E) Exit Shop\nYou have "+points+" coins: ");
                         buy = reader.nextLine();
                         if (buy.equals("HP1")) {
                             if (points>=2) {
@@ -473,10 +488,10 @@ public class Singleplayer {
                             }
                         }
                         else if (buy.equals("HP3")) {
-                            if (points>=6) {
+                            if (points>=5) {
                                 System.out.println("You bought a Health Potion Lavel 3");
                                 healthPotion3++;
-                                points = points -6;
+                                points = points -5;
                             }
                             else {
                                 System.out.println("You don't have enought money");
