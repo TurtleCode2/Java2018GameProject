@@ -20,7 +20,7 @@ public class MainMenu {
                 System.out.println("\n-=Singleplayer Guide=-");
                 System.out.println("Objective: Clear the Dungeon to move on to the next one");
                 System.out.println("How to Play: Just input the option that you want when the game asks");
-                System.out.println("In Game Mechanics:\n - There is a 50% chance to double damage with a critical hit\n - Each enemy killed will give you points to spend at the shop \n - The shop will be available after completing each dungeon\n - Many useful items and upgrades will be available in the shop\n - Every 5 Dungeons is a Boss Dungeon");
+                System.out.println("In Game Mechanics:\n - There is a 50% chance to double damage with a critical hit\n - Each enemy killed will give you points to spend at the shop \n - The shop will be available after completing each dungeon\n - Many useful items and upgrades will be available in the shop\n - Every 5 Dungeons is a Boss Dungeon\n - Killing the center of a boss will end the encounter with all parts destroyed");
             }
             else if(input.equals("GM")) { //Instructions for Multiplayer
                 System.out.println("\n-=Multiplayer Guide=-");

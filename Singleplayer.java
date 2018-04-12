@@ -12,9 +12,9 @@ public class Singleplayer {
         int damageBase = 10;
         double damageMultiplier = 1.0;
         //Items
-        int healthPotion1 = 3; //Restores 25 HP
-        int healthPotion2 = 2; //Restores 50 HP
-        int healthPotion3 = 1; //Restores 100 HP
+        int healthPotion1 = 3; //Restores 100 HP
+        int healthPotion2 = 2; //Restores 250 HP
+        int healthPotion3 = 1; //Restores 500 HP
         //Other Variables
         int dungeonNumber = 1; //Counts Dungeon Number
         int difficulty = 0; //Determines how many monsters are in a dungeon
@@ -328,6 +328,45 @@ public class Singleplayer {
                                         centerHealth = 0;
                                         centerDamage = 0;
                                         points++;
+                                        if (difficulty==5) {
+                                            if (farLeft.equals("")) {
+                                                
+                                            }
+                                            else {
+                                                points++;
+                                            }
+                                            if (farRight.equals("")) {
+                                                
+                                            }
+                                            else {
+                                                points++;
+                                            }
+                                            if (left.equals("")) {
+                                                
+                                            }
+                                            else {
+                                                points++;
+                                            }
+                                            if (right.equals("")) {
+                                                
+                                            }
+                                            else {
+                                                points++;
+                                            }
+                                            farLeft ="";
+                                            farLeftHealth = 0;
+                                            farLeftDamage = 0;
+                                            farRight ="";
+                                            farRightHealth = 0;
+                                            farRightDamage = 0;
+                                            left ="";
+                                            leftHealth = 0;
+                                            leftDamage = 0;
+                                            right ="";
+                                            rightHealth = 0;
+                                            rightDamage = 0;
+                                            points++;
+                                        }
                                     }
                                     break;
                                 }
@@ -396,7 +435,7 @@ public class Singleplayer {
                                 }
                                 else {
                                     System.out.println("You used a health potion!");
-                                    health = health + 25;
+                                    health = health + 100;
                                     healthPotion1 --;
                                     break;
                                 }
@@ -407,7 +446,7 @@ public class Singleplayer {
                                 }
                                 else {
                                     System.out.println("You used a health potion!");
-                                    health = health + 50;
+                                    health = health + 250;
                                     healthPotion2 --;
                                     break;
                                 }
@@ -418,7 +457,7 @@ public class Singleplayer {
                                 }
                                 else {
                                     System.out.println("You used a health potion!");
-                                    health = health + 100;
+                                    health = health + 500;
                                     healthPotion3 --;
                                     break;
                                 }
