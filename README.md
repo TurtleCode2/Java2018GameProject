@@ -3,6 +3,10 @@ Game: Text Based RPG (Dungeon Running Theme)
 
 #Download [Entire] folder to edit and then [Reupload] when done!
 
+To Do:
+ - Add Enter for Progression
+ - Improve UI (remove dead etc.)
+
 SINGLEPLAYER DATA
 
 Shop:
@@ -20,7 +24,6 @@ Stats:
  - Base Damage: 10 base (increase by 5 each upgrade)
  - Damage Multiplier: 1.0 base (increase by 0.1 each upgrade)
  - Critical Hit is 2x damage and a 50% chance
- - Special: ***Coming Soon***
 
 Dungeon Mechanics:
 - Number of Enemies (Player chooses which enemy to attack)
@@ -47,10 +50,8 @@ Monster3:
 - Damage 20
 - 1 point when defeated
 
-Monster Boss 1:
+Monster Boss:
 -  5 Parts, 2xlegs 2xarms 1xbody
 - Stats increase with dungeon number
-  
-MULTIPLAYER DATA
-- some stuffs
+
 
